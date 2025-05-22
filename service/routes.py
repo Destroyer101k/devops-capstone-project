@@ -97,6 +97,8 @@ def get_accounts(account_id):
 
     return account.serialize(), status.HTTP_200_OK
 
+BASE_URL = "/accounts"
+
 def test_get_account_not_found(self):
     """It should not Read an Account that is not found"""
     resp = self.client.get(f"{BASE_URL}/0")
